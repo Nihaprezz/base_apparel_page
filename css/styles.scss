@@ -1,0 +1,63 @@
+@import 'global';
+
+body {
+    font-family: $prime-font;
+    margin: 0;
+    background-image: url('../images/bg-pattern-desktop.svg');
+    background-position: left top;
+    background-repeat: repeat-y;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 57% auto;
+    grid-template-rows: 25% auto;
+    grid-template-areas:
+    'header photo'
+    'body photo';
+}
+
+.header-img {
+    grid-area: header;
+    align-self: center;
+    padding: $padding;
+}
+
+.main-body {
+    grid-area: body;
+    padding-left: $padding;
+    padding-right: 25%;
+
+    h1 {
+        font-size: 8vh;
+        text-transform: uppercase;
+        letter-spacing: 1vh;
+        color: $desu-red;
+        font-weight: 300;
+
+        span {
+            display: block;
+            color: black;
+            font-weight: 400;
+        }
+    }
+
+    p {
+        color: $desu-red;
+        font-weight: 400;
+    }
+
+    form {
+        border: 3px solid red;
+
+        input {
+            
+        }
+    }
+}
+
+.main-photo {
+    grid-area: photo;
+
+    img {
+        height: 101%;
+    }
+}

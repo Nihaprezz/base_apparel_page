@@ -1,0 +1,68 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-position: left top;
+  background-repeat: repeat-y;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  -ms-grid-columns: 57% auto;
+      grid-template-columns: 57% auto;
+  -ms-grid-rows: 25% auto;
+      grid-template-rows: 25% auto;
+      grid-template-areas: 'header photo' 'body photo';
+}
+
+.header-img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 20%;
+}
+
+.main-body {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: body;
+  padding-left: 20%;
+  padding-right: 25%;
+}
+
+.main-body h1 {
+  font-size: 8vh;
+  text-transform: uppercase;
+  letter-spacing: 1vh;
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.main-body h1 span {
+  display: block;
+  color: black;
+  font-weight: 400;
+}
+
+.main-body p {
+  color: #ce9797;
+  font-weight: 400;
+}
+
+.main-body form {
+  border: 3px solid red;
+}
+
+.main-photo {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: photo;
+}
+
+.main-photo img {
+  height: 101%;
+}
+/*# sourceMappingURL=styles.css.map */
