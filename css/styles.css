@@ -59,6 +59,10 @@ body {
   position: relative;
 }
 
+.main-body form button:focus, .main-body form input:focus {
+  outline: none;
+}
+
 .main-body form ::-webkit-input-placeholder {
   color: #C8C8C8;
   font-weight: 400;
@@ -84,6 +88,10 @@ body {
   left: 75%;
   -webkit-box-shadow: 0px 3px 8px #ce9797;
           box-shadow: 0px 3px 8px #ce9797;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
 .main-body form button:hover {
@@ -92,6 +100,10 @@ body {
           transform: scale(1.1) perspective(1px);
   -webkit-box-shadow: 0px 3px 10px #ce9797;
           box-shadow: 0px 3px 10px #ce9797;
+}
+
+.mobile-photo {
+  display: none;
 }
 
 .main-photo {
@@ -103,5 +115,45 @@ body {
 
 .main-photo img {
   height: 101%;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-image: linear-gradient(135deg, white, #fff5f5);
+    width: 103%;
+    -ms-grid-rows: 12% 32% auto;
+        grid-template-rows: 12% 32% auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "m-photo" "body";
+  }
+  .header-img {
+    padding-left: 10%;
+  }
+  .header-img img {
+    width: 40%;
+  }
+  .main-body {
+    text-align: center;
+    padding: 6%;
+  }
+  .main-body h1 {
+    font-size: 5vh;
+  }
+  .main-body form button {
+    left: 77%;
+  }
+  .main-photo {
+    display: none;
+  }
+  .mobile-photo {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: m-photo;
+  }
+  .mobile-photo img {
+    width: 101%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

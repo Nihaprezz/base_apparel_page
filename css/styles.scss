@@ -52,6 +52,10 @@ body {
         margin-top: 10%;
         position: relative;
 
+        button:focus, input:focus{
+            outline: none;
+        }
+
         ::-webkit-input-placeholder {
             color: #C8C8C8;
             font-weight: 400;
@@ -76,6 +80,7 @@ body {
             position: absolute;
             left: 75%;
             box-shadow: 0px 3px 8px $desu-red;
+            transition: transform .5s;
         }
 
         button:hover {
@@ -86,10 +91,64 @@ body {
     }
 }
 
+.mobile-photo {
+    display: none;
+}
+
 .main-photo {
     grid-area: photo;
 
     img {
         height: 101%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        background-image: $linear-1;
+        width: 103%;
+        grid-template-rows: 12% 32% auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "m-photo"
+        "body";
+    }
+    
+    .header-img {
+        padding-left: 10%;
+        
+        img {
+            width: 40%;
+        }
+    }
+
+    .main-body {
+        text-align: center;
+        padding: 6%;
+
+        h1 {
+            font-size: 5vh;
+        }
+
+        form {
+            button {
+                left: 77%;
+            }
+        }
+    }
+     
+    .main-photo {
+        display: none;
+    }
+
+    .mobile-photo {
+        display: block;
+        grid-area: m-photo;
+
+        img {
+            width: 101%;
+        }
     }
 }
