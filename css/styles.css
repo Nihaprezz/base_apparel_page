@@ -21,14 +21,14 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  padding: 20%;
+  padding: 15%;
 }
 
 .main-body {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: body;
-  padding-left: 20%;
+  padding-left: 15%;
   padding-right: 25%;
 }
 
@@ -38,6 +38,7 @@ body {
   letter-spacing: 1vh;
   color: #ce9797;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 .main-body h1 span {
@@ -47,12 +48,50 @@ body {
 }
 
 .main-body p {
+  margin-top: 5%;
   color: #ce9797;
   font-weight: 400;
+  line-height: 1.7;
 }
 
 .main-body form {
-  border: 3px solid red;
+  margin-top: 10%;
+  position: relative;
+}
+
+.main-body form ::-webkit-input-placeholder {
+  color: #C8C8C8;
+  font-weight: 400;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.7vh;
+}
+
+.main-body form input:first-child {
+  border-radius: 25px;
+  width: 82%;
+  height: 40px;
+  border: 2px solid #E8E8E8;
+  padding-left: 5%;
+}
+
+.main-body form button {
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  height: 45px;
+  border-radius: 25px;
+  width: 18%;
+  border: none;
+  position: absolute;
+  left: 75%;
+  -webkit-box-shadow: 0px 3px 8px #ce9797;
+          box-shadow: 0px 3px 8px #ce9797;
+}
+
+.main-body form button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1) perspective(1px);
+          transform: scale(1.1) perspective(1px);
+  -webkit-box-shadow: 0px 3px 10px #ce9797;
+          box-shadow: 0px 3px 10px #ce9797;
 }
 
 .main-photo {
