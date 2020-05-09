@@ -108,7 +108,7 @@ body {
     body {
         background-image: $linear-1;
         width: 103%;
-        grid-template-rows: 12% 32% auto;
+        grid-template-rows: 9% 30% auto;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header"
@@ -120,7 +120,7 @@ body {
         padding-left: 10%;
         
         img {
-            width: 40%;
+            width: 37%;
         }
     }
 
@@ -130,6 +130,10 @@ body {
 
         h1 {
             font-size: 5vh;
+        }
+
+        p {
+            font-size: 1.9vh;
         }
 
         form {
@@ -149,6 +153,14 @@ body {
 
         img {
             width: 101%;
+            height: 100%;
+        }
+    }
+
+    form {
+        button {
+            width: 20% !important;
+            left: 75% !important;
         }
     }
 }

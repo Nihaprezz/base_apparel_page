@@ -121,8 +121,8 @@ body {
   body {
     background-image: linear-gradient(135deg, white, #fff5f5);
     width: 103%;
-    -ms-grid-rows: 12% 32% auto;
-        grid-template-rows: 12% 32% auto;
+    -ms-grid-rows: 9% 30% auto;
+        grid-template-rows: 9% 30% auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "header" "m-photo" "body";
@@ -131,7 +131,7 @@ body {
     padding-left: 10%;
   }
   .header-img img {
-    width: 40%;
+    width: 37%;
   }
   .main-body {
     text-align: center;
@@ -139,6 +139,9 @@ body {
   }
   .main-body h1 {
     font-size: 5vh;
+  }
+  .main-body p {
+    font-size: 1.9vh;
   }
   .main-body form button {
     left: 77%;
@@ -154,6 +157,11 @@ body {
   }
   .mobile-photo img {
     width: 101%;
+    height: 100%;
+  }
+  form button {
+    width: 20% !important;
+    left: 75% !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
