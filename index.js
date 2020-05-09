@@ -17,6 +17,18 @@ function submitForm(e) {
         console.log('email found')
     } else {
         console.log('no email found')
+        addErrorStyle(input)
     }
+}
 
+function addErrorStyle(){
+    let inputField = document.querySelector('#email')
+    inputField.classList.add('input-error')
+   
+    let errorText = document.createElement('p')
+    errorText.innerText = 'Please provide a valid email';
+    errorText.classList.add('error-text');
+
+    let form = document.getElementById('form')
+    form.appendChild(errorText)
 }

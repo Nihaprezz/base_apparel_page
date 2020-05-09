@@ -164,4 +164,16 @@ body {
     left: 75% !important;
   }
 }
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+.error-text {
+  margin: 0 !important;
+  padding-top: 1.5%;
+  padding-left: 5%;
+  font-size: 1.7vh;
+  font-weight: bold !important;
+}
 /*# sourceMappingURL=styles.css.map */
