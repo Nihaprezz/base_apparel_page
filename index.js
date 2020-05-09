@@ -24,6 +24,12 @@ function submitForm(e) {
 function addErrorStyle(){
     let inputField = document.querySelector('#email')
     inputField.classList.add('input-error')
+
+    let errorIcon = document.createElement('img');
+    errorIcon.src = 'images/icon-error.svg';
+    errorIcon.classList.add('error-icon') 
+    inputField.parentNode.insertBefore(errorIcon, inputField.nextSibling);
+    
    
     let errorText = document.createElement('p')
     errorText.innerText = 'Please provide a valid email';
@@ -31,4 +37,6 @@ function addErrorStyle(){
 
     let form = document.getElementById('form')
     form.appendChild(errorText)
+
+
 }
