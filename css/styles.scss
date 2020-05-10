@@ -170,7 +170,13 @@ body {
     border: 2px solid red!important;
 }
 
-.error-text {
+.error-icon {
+    position: absolute;
+    top: 13%;
+    left: 67%;
+}
+
+.results-text {
     margin: 0 !important;
     padding-top: 1.5%;
     padding-left: 5%;
@@ -178,8 +184,7 @@ body {
     font-weight: bold !important;
 }
 
-.error-icon {
-    position: absolute;
-    top: 13%;
-    left: 67%;
+//Success Styles
+.input-success {
+    border: 2px solid lightgreen !important;
 }

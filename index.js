@@ -15,14 +15,16 @@ function submitForm(e) {
     
     if(results){
         console.log('email found')
+        addSuccessStyle()
     } else {
         console.log('no email found')
-        addErrorStyle(input)
+        addErrorStyle()
     }
 }
 
 function addErrorStyle(){
     let inputField = document.querySelector('#email')
+    inputField.classList.remove('input-success')
     inputField.classList.add('input-error')
 
     let errorIcon = document.createElement('img');
@@ -33,10 +35,25 @@ function addErrorStyle(){
    
     let errorText = document.createElement('p')
     errorText.innerText = 'Please provide a valid email';
-    errorText.classList.add('error-text');
+    errorText.classList.add('results-text');
 
     let form = document.getElementById('form')
     form.appendChild(errorText)
+}
 
+function addSuccessStyle(){
+    let inputField = document.querySelector('#email')
+    inputField.classList.add('input-success');
 
+    //removing any error texts
+    document.querySelector('.error-icon').remove();
+    document.querySelector('.results-text').remove();
+
+    //adding success text
+    let successText = document.createElement('p');
+    successText.classList.add('results-text');
+    successText.innerText = 'Email sent'
+
+    let form = document.getElementById('form')
+    form.appendChild(successText)
 }
